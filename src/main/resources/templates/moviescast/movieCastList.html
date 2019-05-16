@@ -1,12 +1,32 @@
 <!DOCTYPE>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <title>Movies Cast</title>
 </head>
 
 <body>
-    Hello movies cast!
+<table border="1">
+    <thead>
+    <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Position</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="movieCast : ${movieCastList}">
+        <td th:text="${movieCast.firstName}"/>
+        <td th:text="${movieCast.lastName}"/>
+        <td th:text="${movieCast.role}"/>
+    </tr>
+    </tbody>
+</table>
+
+<hr>
+<a th:href="@{/}">Back to main page.</a><br>
+
 </body>
 
 </html>

@@ -23,4 +23,9 @@ public class MovieCastServiceImpl implements MovieCastService
     {
         return movieCastRepository.findAll();
     }
+
+    @Override
+    public void saveMovieCast(MovieCast movieCast) {
+        movieCastRepository.save(movieCast);
+    }
 }

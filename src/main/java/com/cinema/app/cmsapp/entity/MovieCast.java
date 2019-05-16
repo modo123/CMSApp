@@ -18,7 +18,7 @@ public class MovieCast
     @Column(name = "last_name")
     private String lastName;
 
-    @Column(name = "role")
+    @Column(name = "cast_role")
     private String role;
 
     @ManyToMany(fetch = FetchType.LAZY,

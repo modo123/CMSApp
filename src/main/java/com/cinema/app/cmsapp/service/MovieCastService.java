@@ -7,4 +7,6 @@ import java.util.List;
 public interface MovieCastService
 {
     List<MovieCast> getAllMovieCast();
+
+    void saveMovieCast(MovieCast movieCast);
 }

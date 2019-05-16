@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Form for adding movie cast.</title>
+</head>
+
+<body>
+
+<form action="#" th:action="@{/movieCast/save}" th:object="${movieCast}" method="POST">
+    <input type="text" th:field="*{firstName}" placeholder="First name"><br><br>
+    <input type="text" th:field="*{lastName}" placeholder="Last name"><br><br>
+    <input type="text" th:field="*{role}" placeholder="Position"><br><br>
+
+    <button type="submit">Save</button>
+</form>
+
+<hr>
+<a th:href="@{/}">Back to main page.</a><br>
+
+</body>
+
+</html>
