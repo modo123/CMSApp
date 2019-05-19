@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Form for adding cinema hall.</title>
+</head>
+
+<body>
+
+<form action="#" th:action="@{/cinemaHalls/save}" th:object="${cinemaHall}" method="POST">
+    <label>Hall number</label>
+    <input type="number" th:field="*{hallNumber}" placeholder="Hall Number"><br><br>
+    <label>Number of seats</label>
+    <input type="number" th:field="*{numOfSeats}" placeholder="Number of seats"><br><br>
+
+    <button type="submit">Save</button>
+</form>
+
+<hr>
+<a th:href="@{/}">Back to main page.</a><br>
+
+</body>
+
+</html>

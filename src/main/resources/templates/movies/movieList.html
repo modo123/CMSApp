@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Movies list</title>
+</head>
+
+<body>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>Original title</th>
+        <th>Polish title</th>
+        <th>Category</th>
+        <th>Duration</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="movie : ${moviesList}">
+        <td th:text="${movie.originalTitle}"/>
+        <td th:text="${movie.polishTitle}"/>
+        <td th:text="${movie.category}"/>
+        <td th:text="${movie.duration}"/>
+    </tr>
+    </tbody>
+</table>
+
+<hr>
+<a th:href="@{/}">Back to main page.</a><br>
+
+
+</body>
+
+</html>

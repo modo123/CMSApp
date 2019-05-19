@@ -1,0 +1,30 @@
+<!DOCTYPE>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Cinema Halls</title>
+</head>
+
+<body>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Hall Number</th>
+        <th>Number of seats</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="cinemaHall : ${cinemaHallsList}">
+        <td th:text="${cinemaHall.hallNumber}"/>
+        <td th:text="${cinemaHall.numOfSeats}"/>
+    </tr>
+    </tbody>
+</table>
+
+<hr>
+<a th:href="@{/}">Back to main page.</a><br>
+
+</body>
+
+</html>
