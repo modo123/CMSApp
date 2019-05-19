@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Add new movie show</title>
+</head>
+
+<body>
+
+<form action="#" th:action="@{/movieShow/save}" th:object="${movieShow}" method="POST">
+    <input type="text" th:field="*{startMovieDate}" placeholder="Start date"><br><br>
+    <input type="text" th:field="*{endMovieDate}" placeholder="End date"><br><br>
+
+    <label>Film title</label>
+    <select th:field="*{movie}">
+        <option th:each="movie : ${moviesList}"
+                th:value="${movie.id}" th:text="${movie.originalTitle}"></option>
+    </select>
+
+    <br><br>
+
+    <label>Hall number</label>
+    <select th:field="*{cinemaHall}">
+        <option th:each="cinemaHall : ${cinemaHallsList}"
+                th:value="${cinemaHall.id}" th:text="${cinemaHall.hallNumber}"></option>
+    </select>
+
+    <br><br>
+
+    <button type="submit">Save</button>
+</form>
+
+<hr>
+<a th:href="@{/}">Back to main page.</a><br>
+
+</body>
+
+</html>

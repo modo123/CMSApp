@@ -1,5 +1,6 @@
 package com.cinema.app.cmsapp.entity;
 
+
 import javax.persistence.*;
 import java.util.Date;
 
