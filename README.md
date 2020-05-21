@@ -4,7 +4,8 @@
 MVC CRUD web application for cinema management system. Spring/Hibernate/Thymeleaf
 
 
-Tekst5
+TekstTempBranch
+
 
 
 
